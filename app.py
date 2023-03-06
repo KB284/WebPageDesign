@@ -2,7 +2,7 @@ from flask import Flask, render_template
 
 app = Flask(__name__)
 
-
+#create general webpages for website
 @app.route('/')
 def home():
     return render_template('home.html', active='home')
@@ -23,5 +23,6 @@ def demo():
 def resources():
     return render_template('resources.html', active='resources')
 
+#run the website
 if __name__ == '__main__':
     app.run()
